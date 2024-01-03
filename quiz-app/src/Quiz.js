@@ -7,12 +7,27 @@ const Quiz = ({ handleScore }) => {
   const [answers, setAnswers] = useState([]);
 
   const questions = [
-    {
-      questionText: 'What is the capital of France?',
-      options: ['Berlin', 'Paris', 'Madrid', 'Rome'],
-      correctAnswer: 'Paris',
-    },
-    // Add more questions as needed
+          {
+          questionText: 'What is the capital of France?',
+          options: ['Berlin', 'Paris', 'Madrid', 'Rome'],
+          correctAnswer: 'Paris',
+          },
+          {
+          questionText: 'What is the capital of Italy?',
+          options: ['Berlin', 'Paris', 'Madrid', 'Rome'],
+          correctAnswer: 'Rome',
+          },
+          {
+          questionText: 'What is the capital of Ghana?',
+          options: ['Berlin', 'Paris', 'Accra', 'Rome'],
+          correctAnswer: 'Accra',
+          },
+          {
+          questionText: 'What is the capital of Spain?',
+          options: ['Berlin', 'Paris', 'Madrid', 'Rome'],
+          correctAnswer: 'Madrid',
+          },
+
   ];
 
   const handleNextQuestion = (selectedAnswer) => {
