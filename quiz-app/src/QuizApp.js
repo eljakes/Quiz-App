@@ -1,7 +1,7 @@
 import './index.css';
 
 import React, { useState } from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'; // Update the import statement
 
 import Quiz from './Quiz';
 import Result from './Result';
@@ -15,14 +15,10 @@ const QuizApp = () => {
 
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Quiz handleScore={handleScore} />
-        </Route>
-        <Route path="/result">
-          <Result score={score} />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Quiz handleScore={handleScore} />} />
+        <Route path="/result" element={<Result score={score} />} />
+      </Routes>
     </Router>
   );
 };
